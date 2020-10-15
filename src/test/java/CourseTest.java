@@ -8,24 +8,36 @@ public class CourseTest
 
 {
 
-    private Course_Programme course;
+    private Course course;
     private DateTime start = new DateTime(2020, 5, 1, 12, 0);
     private DateTime end = new DateTime(2020, 12, 1, 12, 0);
 
     //String name, DateTime startDate, DateTime endDate) {
     @Before
-    public void setup() {
+    public void setup()
+
+    {
+
         course = new Course("Course", start, end);
+
     }
 
     @Test
-    public void startDateTest() {
+    public void startDateTest()
+
+    {
+
         assertEquals(course.getStartDate(), start);
+
     }
 
     @Test
-    public void startEndTest() {
+    public void startEndTest()
+
+    {
+
         assertEquals(course.getEndDate(), end);
+
     }
 
 }

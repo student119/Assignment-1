@@ -10,11 +10,13 @@ public class Course
     DateTime startDate;
     DateTime endDate;
 
-    public Course ()
+    public Course (String course, DateTime start, DateTime end)
 
     {
 
-        //
+        courseName = course;
+        startDate = start;
+        endDate = end;
 
     }
 
