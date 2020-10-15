@@ -8,17 +8,16 @@ public class CourseTest
 
 {
 
-    private Course course;
-    private DateTime start = new DateTime(2020, 5, 1, 12, 0);
-    private DateTime end = new DateTime(2020, 12, 1, 12, 0);
+    private Course courseRandom;
+    private DateTime start = new DateTime(2022, 6, 2, 0, 0);
+    private DateTime end = new DateTime(2026, 11, 3, 0, 0);
 
-    //String name, DateTime startDate, DateTime endDate) {
     @Before
     public void setup()
 
     {
 
-        course = new Course("Course", start, end);
+        courseRandom = new Course("Course", start, end);
 
     }
 
@@ -27,7 +26,7 @@ public class CourseTest
 
     {
 
-        assertEquals(course.getStartDate(), start);
+        assertEquals(courseRandom.getStartDate(), start);
 
     }
 
@@ -36,7 +35,7 @@ public class CourseTest
 
     {
 
-        assertEquals(course.getEndDate(), end);
+        assertEquals(courseRandom.getEndDate(), end);
 
     }
 
