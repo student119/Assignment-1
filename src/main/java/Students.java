@@ -84,14 +84,11 @@ public class Students
 
     }
 
-    public String getStudentUsername (String sName, int sAge)
+    public String getStudentUsername ()
 
     {
 
-        sName = studentName;
-        sAge = studentAge;
-
-        studentUsername = sName.concat(String.valueOf(studentAge));
+        studentUsername = studentName.concat(String.valueOf(studentAge));
 
         return studentUsername;
 
