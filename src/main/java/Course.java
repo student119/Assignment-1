@@ -1,6 +1,6 @@
 import org.joda.time.DateTime;
 
-public class Course_Programme
+public class Course
 
 {
 
@@ -10,7 +10,7 @@ public class Course_Programme
     DateTime startDate;
     DateTime endDate;
 
-    public Course_Programme ()
+    public Course ()
 
     {
 
