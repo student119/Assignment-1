@@ -1,4 +1,5 @@
 import org.joda.time.DateTime;
+import java.util.ArrayList;
 
 public class Students
 
@@ -9,14 +10,20 @@ public class Students
     DateTime studentDOB;
     int studentID;
     String studentUsername;
-    String[] studentCourses;
-    String[] studentModules;
+    ArrayList <String> studentCourses = new ArrayList <String> (1);
+    ArrayList <String> studentModules = new ArrayList <String> (10);
 
-    public Students ()
+    public Students (String name, int age, DateTime DOB, int id, ArrayList <String> courses, ArrayList <String> modules)
 
     {
 
-        //
+        setStudentName (name);
+        setStudentAge (age);
+        setStudentDOB (DOB);
+        setStudentID (id);
+        setStudentUsername (name, age);
+        setStudentCourses (courses);
+        setStudentModules (modules);
 
     }
 
@@ -88,21 +95,19 @@ public class Students
 
     {
 
-        studentUsername = studentName.concat(String.valueOf(studentAge));
-
         return studentUsername;
 
     }
 
-    public void setStudentUsername (String studentUsername)
+    public void setStudentUsername (String name, int age)
 
     {
 
-        this.studentUsername = studentUsername;
+        this.studentUsername = name.concat (String.valueOf (age));
 
     }
 
-    public String[] getStudentCourses ()
+    public ArrayList <String> getStudentCourses ()
 
     {
 
@@ -110,7 +115,7 @@ public class Students
 
     }
 
-    public void setStudentCourses (String[] studentCourses)
+    public void setStudentCourses (ArrayList <String> studentCourses)
 
     {
 
@@ -118,7 +123,7 @@ public class Students
 
     }
 
-    public String[] getStudentModules ()
+    public ArrayList <String> getStudentModules ()
 
     {
 
@@ -126,36 +131,12 @@ public class Students
 
     }
 
-    public void setStudentModules (String[] studentModules)
+    public void setStudentModules (ArrayList <String> studentModules)
 
     {
 
         this.studentModules = studentModules;
 
     }
-
-//    public class CourseTest {
-//
-//        private Course course;
-//        private DateTime start = new DateTime(2020, 5, 1, 12, 0);
-//        private DateTime end = new DateTime(2020, 12, 1, 12, 0);
-//
-//        //String name, DateTime startDate, DateTime endDate) {
-//        @Before
-//        public void setup() {
-//            course = new Course("Course", start, end);
-//        }
-//
-//        @Test
-//        public void startDateTest() {
-//            assertEquals(course.getStartDate(), start);
-//        }
-//
-//        @Test
-//        public void startEndTest() {
-//            assertEquals(course.getEndDate(), end);
-//        }
-//
-//    }
 
 }

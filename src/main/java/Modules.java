@@ -1,17 +1,22 @@
+import java.util.ArrayList;
+
 public class Modules
 
 {
 
     String moduleName;
     int moduleID;
-    String[] studentList;
-    String[] courseList;
+    ArrayList <String> studentList = new ArrayList <String> (100);
+    ArrayList <String> courseList = new ArrayList <String> (1);
 
-    public Modules ()
+    public Modules (String module, int id, ArrayList <String> student, ArrayList <String> course)
 
     {
 
-        //
+        setModuleName (module);
+        setModuleID (id);
+        setStudentList (student);
+        setCourseList (course);
 
     }
 
@@ -47,7 +52,7 @@ public class Modules
 
     }
 
-    public String[] getStudentList ()
+    public ArrayList <String> getStudentList ()
 
     {
 
@@ -55,14 +60,15 @@ public class Modules
 
     }
 
-    public void setStudentList (String[] studentList)
+    public void setStudentList (ArrayList <String> studentList)
 
     {
 
         this.studentList = studentList;
+
     }
 
-    public String[] getCourseList ()
+    public ArrayList <String> getCourseList ()
 
     {
 
@@ -70,7 +76,7 @@ public class Modules
 
     }
 
-    public void setCourseList (String[] courseList)
+    public void setCourseList (ArrayList <String> courseList)
 
     {
 
