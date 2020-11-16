@@ -21,7 +21,7 @@ public class Students
         setStudentAge (age);
         setStudentDOB (DOB);
         setStudentID (id);
-        setStudentUsername (name, age);
+        // setStudentUsername (name, age);
         setStudentCourses (courses);
         setStudentModules (modules);
 
@@ -95,17 +95,22 @@ public class Students
 
     {
 
+        // System.out.println(getStudentName());
+        // System.out.println(getStudentAge());
+
+        this.studentUsername = getStudentName().concat (String.valueOf (getStudentAge ()));
+
         return studentUsername;
 
     }
 
-    public void setStudentUsername (String name, int age)
-
-    {
-
-        this.studentUsername = name.concat (String.valueOf (age));
-
-    }
+//    public void setStudentUsername (String name, int age)
+//
+//    {
+//
+//        this.studentUsername = name.concat (String.valueOf (age));
+//
+//    }
 
     public ArrayList <String> getStudentCourses ()
 

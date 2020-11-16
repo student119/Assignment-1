@@ -11,8 +11,8 @@ public class StudentTest
 {
 
     private Students testStudent;
-    private String testName;
-    private int testAge;
+    private String testName = "Craig Walsh";
+    private int testAge = 28;
     private DateTime testDOB = new DateTime (2030, 7, 7, 13, 49);
     private int testID = ThreadLocalRandom.current ().nextInt (1, 999999 + 1);
     private String testUsername;
@@ -25,6 +25,7 @@ public class StudentTest
     {
 
         testStudent = new Students (testName, testAge, testDOB, testID, testCourses, testModules);
+        testUsername = testName.concat((String.valueOf (testAge)));
 
     }
 
