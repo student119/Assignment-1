@@ -10,21 +10,33 @@ public class StudentTest
 
 {
 
+    // Declares a private Student object named testStudent.
     private Students testStudent;
+    // Declares a private String named testName and sets it equal to "Craig Walsh".
     private String testName = "Craig Walsh";
+    // Declares a private int named testAge and sets it equal to 28.
     private int testAge = 28;
-    private DateTime testDOB = new DateTime (2030, 7, 7, 13, 49);
+    // Declares a private DateTime named testDOB and sets it equal to (1992, 1, 7, 13, 49).
+    private DateTime testDOB = new DateTime (1992, 1, 7, 13, 49);
+    // Declares a private int named testID and sets it equal to a random six digit integer.
     private int testID = ThreadLocalRandom.current ().nextInt (1, 999999 + 1);
+    // Declares a private String named testUsername.
     private String testUsername;
+    // Declares a private ArrayList of type String named testCourses and sets it's initial capacity to 1.
     private ArrayList <String> testCourses = new ArrayList <String> (1);
+    // Declares a private ArrayList of type String named testModules and sets it's initial capacity to 10.
     private ArrayList <String> testModules = new ArrayList <String> (10);
 
+    // @Before runs before any of the @Test tests set up for junit.
     @Before
-    public void setup ()
+    // Method of type void named setUp to assign variables to testStudent.
+    public void setUp ()
 
     {
 
+        //
         testStudent = new Students (testName, testAge, testDOB, testID, testCourses, testModules);
+        // 
         testUsername = testName.concat((String.valueOf (testAge)));
 
     }

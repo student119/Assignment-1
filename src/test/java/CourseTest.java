@@ -8,11 +8,11 @@ public class CourseTest
 
 {
 
-    // Declares a new private Course object named testCourse.
+    // Declares a private Course object named testCourse.
     private Course testCourse;
-    // Declares a new private String named testName and sets it equal to "Computer Science & Information Technology".
+    // Declares a private String named testName and sets it equal to "Computer Science & Information Technology".
     private String testName = "Computer Science & Information Technology";
-    // Declares a new private ArrayList of type String named testModule and sets it's initial capacity to 10.
+    // Declares a private ArrayList of type String named testModule and sets it's initial capacity to 10.
     private ArrayList <String> testModules = new ArrayList <String> (10);
 //    testModules.add("CT561 Systems Modelling & Simulation");
 //    testModules.add("CT436 Advanced Professional Skills");
@@ -24,7 +24,7 @@ public class CourseTest
 //    testModules.add("CT421 Artificial Intelligence");
 //    testModules.add("CT420 Real Time Systems");
 //    testModules.add("CT414 Distributed Systems & Co-Operative Computing");
-    // Declares a private ArrayList named testStudent of type String and sets it;s initial capacity to 100.
+    // Declares a private ArrayList named testStudent of type String and sets it's initial capacity to 100.
     private ArrayList <String> testStudents = new ArrayList <String> (100);
 //    testStudents.add("Craig Walsh");
 //    testStudents.add("Nathan Ryder");
@@ -43,8 +43,8 @@ public class CourseTest
 
     // @Before runs before any of the @Test tests set up for junit.
     @Before
-    // Method of type void named setup to assign variables to testCourse.
-    public void setup ()
+    // Method of type void named setUp to assign variables to testCourse.
+    public void setUp ()
 
     {
 
