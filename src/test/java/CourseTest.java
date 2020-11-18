@@ -1,119 +1,100 @@
+// Imports the joda date/time library.
 import org.joda.time.DateTime;
+// Imports the junit Before library.
 import org.junit.Before;
+// Imports the junit Test library.
 import org.junit.Test;
-import java.util.ArrayList;
+// Imports the junit assertEquals library.
 import static org.junit.Assert.assertEquals;
+// Imports the junit assertTrue library.
+import static org.junit.Assert.assertTrue;
 
+// Public method of type class named CourseTest.
 public class CourseTest
 
 {
 
-    // Declares a private Course object named testCourse.
+    // Declares a private Course named testCourse.
     private Course testCourse;
-    // Declares a private String named testName and sets it equal to "Computer Science & Information Technology".
+    // Declares a private String named testName and sets it equal to Computer Science & Information Technology.
     private String testName = "Computer Science & Information Technology";
-    // Declares a private ArrayList of type String named testModule and sets it's initial capacity to 10.
-    private ArrayList <String> testModules = new ArrayList <String> (10);
-//    testModules.add("CT561 Systems Modelling & Simulation");
-//    testModules.add("CT436 Advanced Professional Skills");
-//    testModules.add("CT4100 Information Retrieval");
-//    testModules.add("CT417 Software Engineering III");
-//    testModules.add("CT4101 Machine Learning");
-//    testModules.add("CT437 Computer Security & Forensic Computing");
-//    testModules.add("CS402 Cryptography");
-//    testModules.add("CT421 Artificial Intelligence");
-//    testModules.add("CT420 Real Time Systems");
-//    testModules.add("CT414 Distributed Systems & Co-Operative Computing");
-    // Declares a private ArrayList named testStudent of type String and sets it's initial capacity to 100.
-    private ArrayList <String> testStudents = new ArrayList <String> (100);
-//    testStudents.add("Craig Walsh");
-//    testStudents.add("Nathan Ryder");
-//    testStudents.add("David Clifford");
-//    testStudents.add("Matthias Nickles");
-//    testStudents.add("Alan Turing");
-//    testStudents.add("Isaac Asimov");
-//    testStudents.add("Christopher Nolan");
-//    testStudents.add("Orlando Bloom");
-//    testStudents.add("Jaroslaw Janas");
-//    testStudents.add("David Schwimmer");
-    // Declares a private DateTime named testStartDate and sets it equal to (2022, 6, 2, 2, 24).
+    // Declares a private String named testModule and sets it equal to Software Engineering III.
+    private String testModule = "Software Engineering III";
+    // Declares a private String named testStudent and sets it equal to Craig Walsh.
+    private String testStudent = "Craig Walsh";
+    // Declares a private DateTime named testStartDate and set it equal to (2022, 6, 2, 2, 24).
     private DateTime testStartDate = new DateTime (2022, 6, 2, 2, 24);
-    // Declares a private DateTime named testEndDate and sets it equal to (2026, 11, 3. 11, 51).
+    // Declares a private DateTime named testEndDate and sets it equal to (2026, 11, 3, 11, 51).
     private DateTime testEndDate = new DateTime (2026, 11, 3, 11, 51);
 
-    // @Before runs before any of the @Test tests set up for junit.
+    // @Before used by junit.
     @Before
-    // Method of type void named setUp to assign variables to testCourse.
+    // Public method of type void named setUp which is always run before any junit tests.
     public void setUp ()
 
     {
 
-        // testCourse has testName, testModules, testStudents, testStartDate, and testEndDate passed as it's parameters.
-        testCourse = new Course (testName, testModules, testStudents, testStartDate, testEndDate);
+        // testCourse is set equal to a new Course with testName, testModule, testStudent, testStartDate, and testEndDate as it's parameters.
+        testCourse = new Course (testName, testModule, testStudent, testStartDate, testEndDate);
 
     }
 
     // @Test test to run for junit.
     @Test
-    // Method of type void named courseNameTest which will test if the course name has been correctly assigned.
+    // Public method of type void named courseNameTest.
     public void courseNameTest ()
 
     {
 
-        // assertEquals is a method from junit which compares the result from the testCourse getCourseName getter method from Course
-        // and sees if it matches the value in testName.
+        // assertEquals is a junit method which will compare the return value of testCourse.getCourseName with testName to see it they match.
         assertEquals (testCourse.getCourseName (), testName);
 
     }
 
     // @Test test to run for junit.
     @Test
-    // Method of type void named courseModuleTest which will test if the modules for a course have been correctly assigned.
+    // Public method of type void named courseModuleTest.
     public void courseModuleTest ()
 
     {
 
-        // assertEquals is a method from junit which compares the result from the testCourse getModuleList method from Course
-        // and sees it it matches the values in testModules.
-        assertEquals (testCourse.getModuleList (), testModules);
+        // assertTrue is a junit method which will check to see if testModule is within the ArrayList of type String returned by testCourse.getModuleList.
+        assertTrue (testCourse.getModuleList ().contains (testModule));
 
     }
 
     // @Test test to run for junit.
     @Test
-    // Method of type void named courseStudentTest which will test if the students for a course have been correctly assigned.
+    // Public method of type void named courseStudentTest.
     public void courseStudentTest ()
 
     {
 
-        // assertEquals is a method from junit which compares the result from the testCourse getStudentList method from Course
-        // and sees it it matches the values in testStudents.
-        assertEquals (testCourse.getStudentList (), testStudents);
+        // assertTrue is a junit method which will check to see if testStudent is within the ArrayList of type String returned by testCourse.getStudentList.
+        assertTrue (testCourse.getStudentList ().contains (testStudent));
 
     }
 
     // @Test test to run for junit.
     @Test
-    // Method of type void named startDateTest which will test if a start date for a course has been correctly assigned.
+    // Public method of type void named startDateTest.
     public void startDateTest ()
 
     {
 
-        // assertEquals is a method from junit which compares the result from the testCourse getStartDate getter method from Course
-        // and sees if it matches the value in testStartDate.
+        // assertEquals is a junit method which will compare the return value of testCourse.getStartDate with testStartDate to see it they match.
         assertEquals (testCourse.getStartDate (), testStartDate);
 
     }
 
     // @Test test to run for junit.
     @Test
-    // Method of type void names startEndTest which will test if an end date for a course has been correctly assigned.
+    // Public method of type void named endDateTest.
     public void startEndTest ()
 
     {
 
-        // assertEquals is a method from junit which compares the result from the testCourse getEndDate method from Course
-        // and sees if it matches the value in testEndDate.
+        // assertEquals is a junit method which will compare the return value of testCourse.getEndDate with testEndDate to see it they match.
         assertEquals (testCourse.getEndDate (), testEndDate);
 
     }
