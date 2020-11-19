@@ -16,26 +16,37 @@ public class ModuleTest
 
 {
 
+    // Declares a private Module named testModule.
     private Modules testModule;
+    // Declares a private String named testName and sets it equal to Software Engineering III.
     private String testName = "Software Engineering III";
+    // Declares a private integer named testId and sets it equal to a randomly generated six digit integer using ThreadLocalRandom.
     private int testID = ThreadLocalRandom.current ().nextInt (1, 999999 + 1);
+    // Declares a private String naed testStudent and sets it equal to Craig Walsh.
     private String testStudent = "Craig Walsh";
+    // Declares a private String named testCourse and sets it equal to Computer Science & Information Technology.
     private String testCourse = "Computer Science & Information Technology";
 
+    // @Before used by junit.
     @Before
+    // Public method of type void named setUp which is always run before any junit tests.
     public void setUp ()
 
     {
 
+        // testModule is set equal to a new Module with testName, testID, testStudent, and testCourse as it's parameters.
         testModule = new Modules (testName, testID, testStudent, testCourse);
 
     }
 
+    // @Test test to run for junit.
     @Test
+    // Public method of type void named moduleNameTest.
     public void moduleNameTest ()
 
     {
 
+        // assertEquals is a junit method which will compare the return value of testCourse.getModuleName with testName to see it they match.
         assertEquals (testModule.getModuleName(), testName);
 
     }
@@ -45,24 +56,31 @@ public class ModuleTest
 
     {
 
-        assertNotNull (String.valueOf (testModule.getModuleID ()), testID);
+        // assertNotNull is a junit method which will check to see if the String value of testModule.getModuleID is not null and see it it equals testID.
+        assertNotNull (String.valueOf (testModule.getModuleID()), testID);
 
     }
 
+    // @Test test to run for junit.
     @Test
+    // Public method of type void named moduleStudentTest.
     public void moduleStudentTest ()
 
     {
 
+        // assertTrue is a junit method which will check to see if testStudent is within the ArrayList of type String returned by testModule.getStudentList.
         assertTrue (testModule.getStudentList ().contains (testStudent));
 
     }
 
+    // @Test test to run for junit.
     @Test
+    // Public method of type void named moduleCourseTest.
     public void moduleCourseTest ()
 
     {
 
+        // assertTrue is a junit method which will check to see if testCourse is within the ArrayList of type String returned by testModule.getCourseList.
         assertTrue (testModule.getCourseList ().contains (testCourse));
 
     }

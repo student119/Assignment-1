@@ -1,3 +1,4 @@
+// Imports the java util ArrayList library.
 import java.util.ArrayList;
 
 public class Modules
