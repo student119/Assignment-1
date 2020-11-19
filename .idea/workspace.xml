@@ -44,6 +44,17 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunManager" selected="Maven.CT417_Assignment_1_Craig_Walsh_16101258 [clean...]">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CourseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CT417_Assignment_1_Craig_Walsh_16101258" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,7 +121,8 @@
       <workItem from="1605714634470" duration="2043000" />
       <workItem from="1605716701437" duration="2164000" />
       <workItem from="1605719026413" duration="132000" />
-      <workItem from="1605781262239" duration="2228000" />
+      <workItem from="1605781262239" duration="2827000" />
+      <workItem from="1605796214700" duration="910000" />
     </task>
     <servers />
   </component>
@@ -130,10 +142,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602687447446" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605781273905">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605796252667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605781273905" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605796252667" />
     <state width="1877" height="687" key="GridCell.Tab.0.bottom" timestamp="1605716678619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
