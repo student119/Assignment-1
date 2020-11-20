@@ -114,7 +114,10 @@ public class Modules
 
     {
 
-        return "[" + moduleName + "," + moduleID + "]";
+        return "Name : " + moduleName + "\n"
+                + "ID : " + moduleID + "\n"
+                + "Students : " + studentList + "\n"
+                + "Course : " + courseList + "\n";
 
     }
 

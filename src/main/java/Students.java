@@ -181,7 +181,13 @@ public class Students
 
     {
 
-        return "[" + studentName + "," + studentAge + "]";
+        return "Name : " + studentName + "\n"
+                + "Age : " + studentAge + "\n"
+                + "DOB : " + studentDOB + "\n"
+                + "ID : " + studentID + "\n"
+                + "Username : " + studentUsername + "\n"
+                + "Courses : " + studentCourses + "\n"
+                + "Modules : " + studentModules + "\n";
 
     }
 

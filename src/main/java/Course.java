@@ -141,7 +141,11 @@ public class Course
 
     {
 
-        return "[" + courseName + "," + startDate + "]";
+        return "Name : " + courseName + "\n"
+                + "Modules : " + moduleList + "\n"
+                + "Students : " + studentList + "\n"
+                + "Start : " + startDate + "\n"
+                + "End : " + endDate + "\n";
 
     }
 
