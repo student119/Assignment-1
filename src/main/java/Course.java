@@ -10,10 +10,10 @@ public class Course
 
     // Declares a String named courseName.
     String courseName;
-    // Declares an ArrayList of type String named moduleList and sets it's initial capacity to 10.
-    ArrayList <String> moduleList = new ArrayList <String> (10);
-    // Declares an ArrayList of type String named studentList and sets it's initial capacity to 100.
-    ArrayList <String> studentList = new ArrayList <String> (100);
+    // Declares an ArrayList of type Modules named moduleList and sets it's initial capacity to 10.
+    ArrayList <Modules> moduleList = new ArrayList <Modules> (10);
+    // Declares an ArrayList of type Students named studentList and sets it's initial capacity to 100.
+    ArrayList <Students> studentList = new ArrayList <Students> (100);
     // Declares a DateTime named startDate.
     DateTime startDate;
     // Declares a DateTime of endDate.
@@ -21,20 +21,14 @@ public class Course
 
     // Public constructor method of Course with parameters of :
     // String named course;
-    // String named module;
-    // String named student;
     // DateTime named start;
     // DateTime named end.
-    public Course (String course, String module, String student, DateTime start, DateTime end)
+    public Course (String course, DateTime start, DateTime end)
 
     {
 
         // Calls the setter method named setCourseName with course as it's parameter.
         setCourseName (course);
-        // Calls the setter method named setModuleList with module as it's parameter.
-        setModuleList (module);
-        // Calls the setter method named setStudentList with student as it's parameter.
-        setStudentList (student);
         // Calls the setter method named setStartDate with start as it's parameter.
         setStartDate (start);
         // Calls the setter method named setEndDate with end as it's parameter.
@@ -62,8 +56,8 @@ public class Course
 
     }
 
-    // Public method of type ArrayList of type String named getModuleList.
-    public ArrayList <String> getModuleList ()
+    // Public method of type ArrayList of type Modules named getModuleList.
+    public ArrayList <Modules> getModuleList ()
 
     {
 
@@ -72,8 +66,8 @@ public class Course
 
     }
 
-    // Public method of type void named setModuleList with a String named moduleList as it's parameter.
-    public void setModuleList (String moduleList)
+    // Public method of type void named setModuleList with a Modules named moduleList as it's parameter.
+    public void setModuleList (Modules moduleList)
 
     {
 
@@ -82,8 +76,8 @@ public class Course
 
     }
 
-    // Public method of type ArrayList of type String named getStudentList.
-    public ArrayList <String> getStudentList ()
+    // Public method of type ArrayList of type Students named getStudentList.
+    public ArrayList <Students> getStudentList ()
 
     {
 
@@ -92,8 +86,8 @@ public class Course
 
     }
 
-    // Public method of type void named setStudentList with a String named studentList as it's parameter.
-    public void setStudentList (String studentList)
+    // Public method of type void named setStudentList with a Students named studentList as it's parameter.
+    public void setStudentList (Students studentList)
 
     {
 

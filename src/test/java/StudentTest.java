@@ -30,10 +30,12 @@ public class StudentTest
     private int testID = ThreadLocalRandom.current ().nextInt (1, 999999 + 1);
     // Declares a private String named testUsername.
     private String testUsername;
-    // Declares a private String named testCourse and sets it equal to Computer Science & Information Technology.
-    private String testCourse = "Computer Science & Information Technology";
-    // Declares a private String named testModule and sets it equal to Software Engineering III.
-    private String testModule = "Software Engineering III";
+
+    // Declares a private Course named testCourse.
+    private Course testCourse;
+
+    // Declares a private Modules named testModule.
+    private Modules testModule;
 
     // @Before used by junit.
     @Before
@@ -43,12 +45,13 @@ public class StudentTest
     {
 
         // testStudent is set equal to a new Student with testName, testAge, testDOB, testID, testCourse, and testModule as it's parameters.
-        testStudent = new Students (testName, testAge, testDOB, testID, testCourse, testModule);
-        // The testUsername is built by concatenating the name and age of the student.
-        // It does not have a setter method, instead using a modified getter method to generate the username.
-        // For testing purposes, the username must be generated using the below line.
-        // testUsername is set equal to the concatenated values of testName and the String value of testAge.
-        testUsername = testName.concat((String.valueOf (testAge)));
+        testStudent = new Students (testName, testAge, testDOB, testID);
+        // testUsername is set equal to the returned value of testStudent.getStudentUsername.
+        testUsername = testStudent.getStudentUsername ();
+        // Calls the setter method for testStudent's course list with testCourse as it's parameter.
+        testStudent.setStudentCourses (testCourse);
+        // Calls the setter method for testStudent's module list with testModule as it's parameter.
+        testStudent.setStudentModules (testModule);
 
     }
 

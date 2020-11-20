@@ -18,19 +18,17 @@ public class Students
     int studentID;
     // Declares a String named studentUsername.
     String studentUsername;
-    // Declares an ArrayList of type String named studentCourses and sets it's initial capacity to 10.
-    ArrayList <String> studentCourses = new ArrayList <String> (10);
-    // Declares an ArrayList of type String named studentModules ad sets it's initial capacity to 100.
-    ArrayList <String> studentModules = new ArrayList <String> (100);
+    // Declares an ArrayList of type Course named studentCourses and sets it's initial capacity to 10.
+    ArrayList <Course> studentCourses = new ArrayList <Course> (10);
+    // Declares an ArrayList of type Modules named studentModules ad sets it's initial capacity to 100.
+    ArrayList <Modules> studentModules = new ArrayList <Modules> (100);
 
     // Public constructor method of Students with parameters of :
     // String named name;
     // Integer named age;
     // DateTime named DOB;
     // Integer named ID;
-    // String named courses;
-    // String named modules.
-    public Students (String name, int age, DateTime DOB, int ID, String courses, String modules)
+    public Students (String name, int age, DateTime DOB, int ID)
 
     {
 
@@ -42,10 +40,6 @@ public class Students
         setStudentDOB (DOB);
         // Calls the setter method named setStudentID with ID as it's parameter.
         setStudentID (ID);
-        // Calls the setter method named setStudentCourses with courses as it's parameter.
-        setStudentCourses (courses);
-        // Calls the setter method named setStudentModules with modules as it's parameter.
-        setStudentModules (modules);
 
     }
 
@@ -142,8 +136,8 @@ public class Students
 
     }
 
-    // Public method of type ArrayList of type String named getStudentCourses.
-    public ArrayList <String> getStudentCourses ()
+    // Public method of type ArrayList of type Course named getStudentCourses.
+    public ArrayList <Course> getStudentCourses ()
 
     {
 
@@ -152,8 +146,8 @@ public class Students
 
     }
 
-    // Public method of type void named setStudentCourses with a String named studentCourses as it's parameter.
-    public void setStudentCourses (String studentCourses)
+    // Public method of type void named setStudentCourses with a Course named studentCourses as it's parameter.
+    public void setStudentCourses (Course studentCourses)
 
     {
 
@@ -162,8 +156,8 @@ public class Students
 
     }
 
-    // Public method of type ArrayList of type String named getStudentModules.
-    public ArrayList <String> getStudentModules ()
+    // Public method of type ArrayList of type Modules named getStudentModules.
+    public ArrayList <Modules> getStudentModules ()
 
     {
 
@@ -172,8 +166,8 @@ public class Students
 
     }
 
-    // Public method of type void named setStudentModules with a String named studentModules as it's parameter.
-    public void setStudentModules (String studentModules)
+    // Public method of type void named setStudentModules with a Modules named studentModules as it's parameter.
+    public void setStudentModules (Modules studentModules)
 
     {
 

@@ -10,17 +10,15 @@ public class Modules
     String moduleName;
     // Declares an integer named moduleID.
     int moduleID;
-    // Declare an ArrayList of type String named studentList and sets it's initial capacity to 100.
-    ArrayList <String> studentList = new ArrayList <String> (100);
-    // Declares an ArrayList of type String named courseList and sets it's initial capacity to 10.
-    ArrayList <String> courseList = new ArrayList <String> (10);
+    // Declare an ArrayList of type Students named studentList and sets it's initial capacity to 100.
+    ArrayList <Students> studentList = new ArrayList <Students> (100);
+    // Declares an ArrayList of type Course named courseList and sets it's initial capacity to 10.
+    ArrayList <Course> courseList = new ArrayList <Course> (10);
 
     // Public constructor method of Modules with parameters of:
     // String named module;
     // Integer named ID;
-    // String named student;
-    // String named course.
-    public Modules (String module, int ID, String student, String course)
+    public Modules (String module, int ID)
 
     {
 
@@ -28,10 +26,6 @@ public class Modules
         setModuleName (module);
         // Calls the setter method named setModuleID with ID as it's parameter.
         setModuleID (ID);
-        // Calls the setter method named setStudentList with student as it's parameter.
-        setStudentList (student);
-        // Calls the setter method named setCourseList with course as it's parameter.
-        setCourseList (course);
 
     }
 
@@ -75,8 +69,8 @@ public class Modules
 
     }
 
-    // Public method of type ArrayList of type String named getStudentList.
-    public ArrayList <String> getStudentList ()
+    // Public method of type ArrayList of type Students named getStudentList.
+    public ArrayList <Students> getStudentList ()
 
     {
 
@@ -85,8 +79,8 @@ public class Modules
 
     }
 
-    // Public method of type void named setStudentList with a String named studentList as it's parameter.
-    public void setStudentList (String studentList)
+    // Public method of type void named setStudentList with a Students named studentList as it's parameter.
+    public void setStudentList (Students studentList)
 
     {
 
@@ -95,8 +89,8 @@ public class Modules
 
     }
 
-    // Public method of type ArrayList of type String named getCourseList.
-    public ArrayList <String> getCourseList ()
+    // Public method of type ArrayList of type Course named getCourseList.
+    public ArrayList <Course> getCourseList ()
 
     {
 
@@ -105,8 +99,8 @@ public class Modules
 
     }
 
-    // Public method of type void named setCourseList with a String named courseList as it's parameter.
-    public void setCourseList (String courseList)
+    // Public method of type void named setCourseList with a Course named courseList as it's parameter.
+    public void setCourseList (Course courseList)
 
     {
 

@@ -22,10 +22,12 @@ public class ModuleTest
     private String testName = "Software Engineering III";
     // Declares a private integer named testId and sets it equal to a randomly generated six digit integer using ThreadLocalRandom.
     private int testID = ThreadLocalRandom.current ().nextInt (1, 999999 + 1);
-    // Declares a private String naed testStudent and sets it equal to Craig Walsh.
-    private String testStudent = "Craig Walsh";
-    // Declares a private String named testCourse and sets it equal to Computer Science & Information Technology.
-    private String testCourse = "Computer Science & Information Technology";
+
+    // Declares a private Course named testCourse.
+    private Course testCourse;
+
+    // Declares a private Students named testStudent.
+    private Students testStudent;
 
     // @Before used by junit.
     @Before
@@ -35,7 +37,11 @@ public class ModuleTest
     {
 
         // testModule is set equal to a new Module with testName, testID, testStudent, and testCourse as it's parameters.
-        testModule = new Modules (testName, testID, testStudent, testCourse);
+        testModule = new Modules (testName, testID);
+        // Calls the setter method for testModule's student list with testStudent as it's parameter.
+        testModule.setStudentList (testStudent);
+        // Calls the setter method for testModule's course list with testCourse as it's parameter.
+        testModule.setCourseList (testCourse);
 
     }
 
@@ -47,17 +53,19 @@ public class ModuleTest
     {
 
         // assertEquals is a junit method which will compare the return value of testCourse.getModuleName with testName to see it they match.
-        assertEquals (testModule.getModuleName(), testName);
+        assertEquals (testModule.getModuleName (), testName);
 
     }
 
+    // @Test test to run for junit.
     @Test
+    // Public method of type void named moduleIDTest.
     public void moduleIDTest ()
 
     {
 
         // assertNotNull is a junit method which will check to see if the String value of testModule.getModuleID is not null and see it it equals testID.
-        assertNotNull (String.valueOf (testModule.getModuleID()), testID);
+        assertNotNull (String.valueOf (testModule.getModuleID ()), testID);
 
     }
 
@@ -68,7 +76,7 @@ public class ModuleTest
 
     {
 
-        // assertTrue is a junit method which will check to see if testStudent is within the ArrayList of type String returned by testModule.getStudentList.
+        // assertTrue is a junit method which will check to see if testStudent is within the ArrayList of type Students returned by testModule.getStudentList.
         assertTrue (testModule.getStudentList ().contains (testStudent));
 
     }
@@ -80,7 +88,7 @@ public class ModuleTest
 
     {
 
-        // assertTrue is a junit method which will check to see if testCourse is within the ArrayList of type String returned by testModule.getCourseList.
+        // assertTrue is a junit method which will check to see if testCourse is within the ArrayList of type Course returned by testModule.getCourseList.
         assertTrue (testModule.getCourseList ().contains (testCourse));
 
     }

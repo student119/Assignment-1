@@ -17,15 +17,17 @@ public class CourseTest
     // Declares a private Course named testCourse.
     private Course testCourse;
     // Declares a private String named testName and sets it equal to Computer Science & Information Technology.
-    private String testName = "Computer Science & Information Technology";
-    // Declares a private String named testModule and sets it equal to Software Engineering III.
-    private String testModule = "Software Engineering III";
-    // Declares a private String named testStudent and sets it equal to Craig Walsh.
-    private String testStudent = "Craig Walsh";
+    private String testName = "Test Course 1";
     // Declares a private DateTime named testStartDate and set it equal to (2022, 6, 2, 2, 24).
     private DateTime testStartDate = new DateTime (2022, 6, 2, 2, 24);
     // Declares a private DateTime named testEndDate and sets it equal to (2026, 11, 3, 11, 51).
     private DateTime testEndDate = new DateTime (2026, 11, 3, 11, 51);
+
+    // Declares a private Modules named testModule.
+    private Modules testModule;
+
+    // Declares a private Students named testStudent.
+    private Students testStudent;
 
     // @Before used by junit.
     @Before
@@ -34,8 +36,12 @@ public class CourseTest
 
     {
 
-        // testCourse is set equal to a new Course with testName, testModule, testStudent, testStartDate, and testEndDate as it's parameters.
-        testCourse = new Course (testName, testModule, testStudent, testStartDate, testEndDate);
+        // testCourse is set equal to a new Course with testName, testStartDate, and testEndDate as it's parameters.
+        testCourse = new Course (testName, testStartDate, testEndDate);
+        // Calls the setter method for testCourse's module list with testModule as it's parameter.
+        testCourse.setModuleList (testModule);
+        // Calls the setter method for testCourse's student list with testStudent as it's parameter.
+        testCourse.setStudentList (testStudent);
 
     }
 
@@ -58,7 +64,7 @@ public class CourseTest
 
     {
 
-        // assertTrue is a junit method which will check to see if testModule is within the ArrayList of type String returned by testCourse.getModuleList.
+        // assertTrue is a junit method which will check to see if testModule is within the ArrayList of type Modules returned by testCourse.getModuleList.
         assertTrue (testCourse.getModuleList ().contains (testModule));
 
     }
