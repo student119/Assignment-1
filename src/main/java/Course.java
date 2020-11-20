@@ -136,17 +136,17 @@ public class Course
 
     }
 
-    @Override
-    public String toString ()
-
-    {
-
-        return "Name : " + courseName + "\n"
-                + "Modules : " + moduleList + "\n"
-                + "Students : " + studentList + "\n"
-                + "Start : " + startDate + "\n"
-                + "End : " + endDate + "\n";
-
-    }
+//    @Override
+//    public String toString ()
+//
+//    {
+//
+//        return "Name : " + courseName + "\n"
+//                + "Modules : " + moduleList + "\n"
+//                + "Students : " + studentList + "\n"
+//                + "Start : " + startDate + "\n"
+//                + "End : " + endDate + "\n";
+//
+//    }
 
 }

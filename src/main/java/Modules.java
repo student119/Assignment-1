@@ -109,16 +109,16 @@ public class Modules
 
     }
 
-    @Override
-    public String toString ()
-
-    {
-
-        return "Name : " + moduleName + "\n"
-                + "ID : " + moduleID + "\n"
-                + "Students : " + studentList + "\n"
-                + "Course : " + courseList + "\n";
-
-    }
+//    @Override
+//    public String toString ()
+//
+//    {
+//
+//        return "Name : " + moduleName + "\n"
+//                + "ID : " + moduleID + "\n"
+//                + "Students : " + studentList + "\n"
+//                + "Course : " + courseList + "\n";
+//
+//    }
 
 }
