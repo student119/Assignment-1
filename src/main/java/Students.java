@@ -176,4 +176,13 @@ public class Students
 
     }
 
+    @Override
+    public String toString ()
+
+    {
+
+        return "[" + studentName + "," + studentAge + "]";
+
+    }
+
 }

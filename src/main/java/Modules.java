@@ -109,4 +109,13 @@ public class Modules
 
     }
 
+    @Override
+    public String toString ()
+
+    {
+
+        return "[" + moduleName + "," + moduleID + "]";
+
+    }
+
 }
